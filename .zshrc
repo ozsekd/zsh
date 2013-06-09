@@ -1,8 +1,7 @@
 ZSH=$HOME/.zsh
 ZSH_CUSTOM=$ZSH/custom
 
-plugins=(git archlinux history-substring-search systemd web-search urltools rsync python virtualenv bundler command-not-found compleat dircycle extract git-extras themes tmux 
-zsh-syntax-highlighting)
+plugins=(git archlinux history-substring-search zsh-syntax-highlighting)
 
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
@@ -34,3 +33,7 @@ for plugin ($plugins); do
 done
 
 source $HOME/.aliases
+
+source $HOME/.rvm/scripts/rvm
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
